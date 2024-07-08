@@ -1,0 +1,178 @@
+:root {
+    --card-height: 300px;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: rgb(75, 147, 147);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(65, 100, 100);
+}
+
+.group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    justify-content: center;
+
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 10px 25px;
+}
+
+.cover-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    border: 1px solid;
+    border-image: linear-gradient(to bottom, rgb(0, 0, 0), white) 1;
+}
+
+.card:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+}
+
+.wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(to top,
+            transparent 46%,
+            rgba(12, 13, 19, 0.5) 68%,
+            rgba(12, 13, 19) 97%);
+}
+
+.wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(to bottom,
+            transparent 46%,
+            rgba(12, 13, 19, 0.5) 68%,
+            rgba(12, 13, 19) 97%);
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+    opacity: 1;
+}
+
+.card:hover .wrapper::after {
+    height: 120px;
+}
+.card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+}
+.card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+}
+
+.title {
+    width: 100%;
+    transition: transform 0.5s;
+    padding: 5px;
+
+}
+
+
+.character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+}
+
+
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+
+}
+
+.foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+.img-banner {
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+}
+
+.img-banner .foreground h1 {
+    text-align: center;
+    color: white;
+    margin-top: 250px;
+    font-size: 50px;
+    padding: 0px 30px;
+}
+
+.corps {
+    margin-left: 13rem;
+    margin-right: 13rem;
+}
+
+.title-perso {
+    border-bottom: 2px solid;
+    width: fit-content;
+}
+
+.txt1 {
+    text-align: justify;
+    font-size: 20px;
+}
+
+.txt-pres {
+    font-size: 20px;
+}
