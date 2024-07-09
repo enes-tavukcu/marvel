@@ -131,8 +131,10 @@ body {
 body {
     margin: 0;
     overflow-x: hidden;
-
+    font-family: 'Oswald', Arial, sans-serif;
 }
+
+
 
 .foreground {
     position: absolute;
