@@ -38,15 +38,65 @@
                     <li class="title2">Équipes de Super-Héros</li>
                     <li class="animate"><a href="/equipe_superheros/avengers.html">Avengers</a></li>
                     <li class="animate"><a href="/equipe_superheros/gotg.html">Les Gardiens de la Galaxie</a></li>
-                    <!-- Autres éléments -->
+                    <li class="animate"><a href="/equipe_superheros/fantasticfour.html">Les 4 Fantastiques</a></li>
+                    <li class="animate"><a href="/equipe_superheros/xmen.html">Les X-Men</a></li>
+                    <li class="animate"><a href="/equipe_superheros/thedefenders.html">The Defenders</a></li>
+                    <li class="animate"><a href="/equipe_superheros/inhumains.html">Les Inhumains</a></li>
+                    <li class="animate"><a href="/equipe_superheros/eternals.html">Les Éternels</a></li>
+                    <li class="animate"><a href="/equipe_superheros/newmutants.html">Les Nouveaux Mutants</a></li>
+                    <li class="animate"><a href="/equipe_superheros/youngavengers.html">Young Avengers</a></li>
+                    <li class="animate"><a href="/equipe_superheros/illuminati.html">Les Illuminatis</a></li>
                 </ul>
                 <ul>
                     <li class="title2">Équipes de Super-Vilains</li>
                     <li class="animate"><a href="/equipe_vilains/mauvaismutants.html">La Confrérie des Mauvais
                             Mutants</a></li>
-                    <!-- Autres éléments -->
+                    <li class="animate"><a href="/equipe_vilains/sinistersix.html">Les Sinister Six</a></li>
+                    <li class="animate"><a href="/equipe_vilains/legiondesdamne.html">La Légion des Damnés</a></li>
+                    <li class="animate"><a href="/equipe_vilains/ordrenoir.html">L'Ordre Noir</a></li>
+                    <li class="animate"><a href="/equipe_vilains/thunderbolt.html">Les Thunderbolts</a></li>
+                    <li class="animate"><a href="/equipe_vilains/hydra.html">Hydra</a></li>
+                    <li class="animate"><a href="/equipe_vilains/aim.html">A.I.M.</a></li>
+                    <li class="animate"><a href="/equipe_vilains/darkavengers.html">Dark Avengers</a></li>
+
+
                 </ul>
-                <!-- Autres listes -->
+                <ul>
+                    <li class="title2">Vilains Principaux</li>
+                    <li class="animate"><a href="/vilains_principaux/apocalypse.html">Apocalypse</a></li>
+                    <li class="animate"><a href="/vilains_principaux/drdoom.html">Dr Doom</a></li>
+                    <li class="animate"><a href="/vilains_principaux/galactus.html">Galactus</a></li>
+                    <li class="animate"><a href="/vilains_principaux/kang.html">Kang le conquérant</a></li>
+                    <li class="animate"><a href="/vilains_principaux/lemandarin.html">Le Mandarin</a></li>
+                    <li class="animate"><a href="/vilains_principaux/magneto.html">Magnéto</a></li>
+                    <li class="animate"><a href="/vilains_principaux/thanos.html">Thanos</a></li>
+                    <li class="animate"><a href="/vilains_principaux/ultron.html">Ultron</a></li>
+                </ul>
+                <ul>
+                    <li class="title2">Héros Principaux</li>
+                    <li class="animate"><a href="/heros_principaux/captainamerica.html">Captain America</a></li>
+                    <li class="animate"><a href="/heros_principaux/drstrange.html">Dr Strange</a></li>
+                    <li class="animate"><a href="/heros_principaux/ironman.html">Iron Man</a></li>
+                    <li class="animate"><a href="/heros_principaux/mrfantastic.html">Mr Fantastic</a></li>
+                    <li class="animate"><a href="/heros_principaux/professeurx.html">Professeur X</a></li>
+                    <li class="animate"><a href="/heros_principaux/spiderman.html">Spider-Man</a></li>
+                    <li class="animate"><a href="/heros_principaux/thor.html">Thor</a></li>
+                    <li class="animate"><a href="/heros_principaux/wolverine.html">Wolverine</a></li>
+                </ul>
+                <ul>
+                    <li class="title2">Institutions</li>
+                    <li class="animate"><a href="/institutions/ecolecharlesxavier.html">Ecole Charles Xavier</a>
+                    </li>
+                    <li class="animate"><a href="/institutions/shield.html">S.H.I.E.L.D.</a></li>
+                    <li class="animate"><a href="/institutions/tva.html">TVA</a></li>
+                </ul>
+                <ul>
+                    <li class="title2">Spider-Verse</li>
+                    <li class="animate"><a href="/spider-verse/heros.html">Héros</a></li>
+                    <li class="animate"><a href="/spider-verse/multivers.html">Multivers</a></li>
+                    <li class="animate"><a href="/spider-verse/sinistersix.html">Sinister Six</a></li>
+                    <li class="animate"><a href="/spider-verse/symbiotes.html">Symbiotes</a></li>
+                </ul>
             </div>
         </div>
         <div class="dropdown">
@@ -62,7 +112,11 @@
         <a href="/lore_mystique.html">Lore Mystique</a>
         <a href="/multivers.html">Multivers</a>
         <a href="/autresperso.html">Autres Personnages</a>
+
+
+
     </div>
+
 </header>
 
 <body>
@@ -402,92 +456,7 @@
     }
 
 
-    function showTxtLogiciel(id) {
-        document.getElementById(id).style.display = "block";
-    }
-
-    function hideTxtLogiciel(id) {
-        document.getElementById(id).style.display = "none";
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const cards = document.querySelectorAll('.card');
-
-        cards.forEach(card => {
-            card.addEventListener("mousemove", e => {
-                let cardRect = card.getBoundingClientRect();
-                let x = e.clientX - cardRect.x;
-                let y = e.clientY - cardRect.y;
-
-                let midCardWidth = cardRect.width / 2;
-                let midCardHeight = cardRect.height / 2;
-
-                let angleY = (x - midCardWidth) / 8;
-                let angleX = (y - midCardHeight) / 8;
-
-                let glowX = (x / cardRect.width) * 100;
-                let glowY = (y / cardRect.height) * 100;
-
-                card.children[0].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.1)`;
-                card.children[1].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.1)`;
-            });
-
-            card.addEventListener("mouseleave", () => {
-                card.children[0].style.transform = "rotateX(0deg) rotateY(0deg)";
-                card.children[1].style.transform = "rotateX(0deg) rotateY(0deg)";
-            });
-        });
-    });
-
-
-    $(function () {
-        $('.card h3').on('click', function () {
-            var card = $(this).closest('.card');
-            var allCards = $('.card');
-
-            if (card.hasClass('open')) {
-                card.removeClass('open');
-                allCards.removeClass('closed');
-            } else if (card.hasClass('closed')) {
-                allCards.removeClass('closed open')
-            } else {
-                allCards.addClass('closed');
-                card.addClass('open');
-            }
-        });
-    });
-
-
-    let yearEl = document.querySelectorAll('.year')
-
-    let body = document.body
-    let themeBtn = document.querySelector('#themeButton')
-    let themeText = document.querySelector('.theme-text')
-    let savedTheme = localStorage.getItem('theme')
-
-    if (savedTheme) {
-        body.className = savedTheme
-    }
-    let themes = ['light', 'dark']
-
-
-    let count = (savedTheme !== undefined || null) ? themes.indexOf(savedTheme) : 0;
-
-
-
-    function showDate() {
-        let today = new Date();
-        //create an object first to indicate what values you want to output
-        let options = {
-            day: "numeric",
-            month: "short",
-        }
-        let year = today.getFullYear()
-        //indicate the language you want it in first then use the options object for your values
-        let sDay = today.toLocaleDateString("en-US", options) + ' ' + year;
-        return sDay
-    }
-    Array.from(yearEl).forEach(el => el.textContent = showDate())
+    
 
 </script>
 
